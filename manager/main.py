@@ -15,7 +15,7 @@ import configparser
 
 import flask
 
-import forms
+from manager import forms
 
 app = flask.Flask(__name__)
 app.config["WTF_CSRF_ENABLED"] = False
