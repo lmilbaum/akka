@@ -5,12 +5,10 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY manager/ ./manager/
 
-RUN pip install -r requirements.txt
-
-COPY . .
+RUN pip install -r manager/requirements.txt
 
 EXPOSE 5000
 
-CMD ["python", "main.py"]
+CMD ["python", "-m", "manager.main"]

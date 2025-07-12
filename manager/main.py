@@ -15,7 +15,7 @@ import configparser
 
 import flask
 
-import forms
+from manager import forms
 
 app = flask.Flask(__name__)
 app.config["WTF_CSRF_ENABLED"] = False
@@ -30,7 +30,7 @@ def show_environments():
     passes the list of environments with their details to the template.
     """
     config = configparser.ConfigParser()
-    config.read("environments.cfg")
+    config.read("manager/environments.cfg")
     environments = []
     for section in config.sections():
         env = {"name": section}

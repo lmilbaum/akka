@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: manager
-        image: ghcr.io/platform-engineering-org/manager:latest
+        image: ghcr.io/platform-engineering-org/akka-manager:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
